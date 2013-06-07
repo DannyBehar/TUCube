@@ -1,12 +1,20 @@
 
 public class Main {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Cube test = new Cube();
+		writeFive(test);
+		test.print();
 
+	}
+
+	private static void writeFive(Cube theCube) {
+		theCube.fillTopRow();
+		theCube.fillTopHalfOfFirstColumn();
+		theCube.fillCenterRow();
+		theCube.fillBottomHalfOfLastColumn();
+		theCube.fillBottomRow();
+		
 	}
 
 }
