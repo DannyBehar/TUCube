@@ -146,27 +146,64 @@ public class Cube {
 			wx++;
 		}
 	}
-	
-	public void writeFive(int theX,int theY){ //x and y are the top left starting point for the five
-		int x=theX;
-		int y =theY;
-		int cx = x; //current x
-		int cy = y; //current y
-		for(int i=0;i<3;i++){
-			this.data[cy][cx] = 1;
-			cx++;
-		}//write flag. 3 can be a variable for its length
-		cy++;
-		cx=x;
-		for(int i=0;i<1;i++){
-			this.data[cy][cx] = 1;
-			cy++;
-		}// the fives torso
-		for(int i=0;i<3;i++){
-			this.data[cy][cx] = 1;
-			cx++;
-		}
+	public void writeZero(){
+		this.fillTopRow();
+		this.fillFirstColumn();
+		this.fillLastColumn();
+		this.fillBottomRow();
 	}
-	
-	
+	public void writeOne(){
+		this.fillTopHalfOfLastColumn();
+		this.fillBottomHalfOfLastColumn();
+	}
+	public void writeTwo(){
+		this.fillTopRow();
+		this.fillTopHalfOfLastColumn();
+		this.fillCenterRow();
+		this.fillBottomHalfOfFirstColumn();
+		this.fillBottomRow();
+	}
+	public void writeThree(){
+		this.fillTopRow();
+		this.fillLastColumn();
+		this.fillCenterRow();
+		this.fillBottomRow();
+	}
+	public void writeFour(){
+		this.fillTopHalfOfFirstColumn();
+		this.fillCenterRow();
+		this.fillLastColumn();
+	}
+	public void writeFive() {
+		this.fillTopRow();
+		this.fillTopHalfOfFirstColumn();
+		this.fillCenterRow();
+		this.fillBottomHalfOfLastColumn();
+		this.fillBottomRow();
+		}
+	public void writeSix(){
+		this.fillTopRow();
+		this.fillTopHalfOfFirstColumn();
+		this.fillCenterRow();
+		this.fillBottomHalfOfFirstColumn();
+		this.fillBottomHalfOfLastColumn();
+		this.fillBottomRow();
+	}
+	public void writeSeven(){
+		this.fillTopRow();
+		this.fillLastColumn();
+	}
+	public void writeEight(){
+		this.fillTopRow();
+		this.fillBottomRow();
+		this.fillFirstColumn();
+		this.fillLastColumn();
+		this.fillCenterRow();
+	}
+	public void writeNine(){
+		this.fillTopRow();
+		this.fillTopHalfOfFirstColumn();
+		this.fillCenterRow();
+		this.fillLastColumn();
+	}
 }
